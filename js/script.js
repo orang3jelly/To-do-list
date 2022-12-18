@@ -10,20 +10,6 @@
         },
     ]
 
-    const render = () => {
-        let htmlString = "";
-
-        for (const task of tasks) {
-            htmlString += `
-            <li ${task.done ? "class=\"container__listItem\"" : ""}>
-                ${task.content}
-            </li>
-            `;
-        }
-
-        document.querySelector(".js-list").innerHTML = htmlString;
-    };
-
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
@@ -32,6 +18,35 @@
         render();
     };
 
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+        render();
+    };
+
+    const render = () => {
+        let htmlString = "";
+
+        for (const task of tasks) {
+            htmlString += `
+            <li ${task.done ? "class=\"container__listItem\"" : ""}>
+                <button class="js-remove">Usuń</button>
+                ${task.content}
+            </li>
+            `;
+        }
+
+        document.querySelector(".js-list").innerHTML = htmlString;
+
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        removeButtons.forEach((removeButtons, index) => {
+            removeButtons.addEventListener("click", () => {
+                removeTask(index);
+            });
+        });
+    
+    };
+    
     const onFormSubmit = (event) => {
         event.preventDefault();
 
@@ -40,7 +55,7 @@
         if (newTaskContent === "") {
             return;
         }
-        
+
         addNewTask(newTaskContent);
     };
 
