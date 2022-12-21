@@ -1,6 +1,51 @@
-.container{
+.div__section{
     box-shadow: 9px 6px 50px -4px #BFC1BB;
+    
+}
+
+.div__inputSection{
     background-color: #fff;
+    margin: 2px 1px;
+    padding: 15px;
+}
+
+.div__header-first{
+font-size: 20px;
+padding: 15px 15px;
+margin: 1px 1px;
+background-color: #fff;
+}
+
+.div__section-bottom{
+    margin-top: 30px;
+}
+
+.div__form{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 15px;
+    
+}
+
+.div__input{
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+}
+
+.div__button{
+    background-color: teal;
+    padding: 11px 25px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.div__button:hover{
+    background-color: #006666;
+}
+
+.div__button:active{
+    background-color: #009999;
 }
 
 .container__listItem{
