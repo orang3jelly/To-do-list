@@ -14,39 +14,33 @@
     <title>Lista zadań</title>
 </head>
 
-<body>
-    
-    <div class="container">
-        <div class="container__mainHeader">
-            <h1>Lista zadań</h1>
+<body class="body">
+
+    <main>
+        <h1 class="header">Lista zadań</h1>
+        <div class="container">
+            <h2 class="container__header">Dodaj nowe zadanie</h2>
+            <section>
+                <form class="js-form">
+                    <input class="js-newTask" placeholder="Co jest do zrobienia?">
+                    <button>Dodaj zadanie</button>
+                </form>
+            </section>
         </div>
+        <div class="container">
+            <section>
+                <div>
+                    <h2>Lista zadań</h2>
+                    <p></p>
+                </div>
+            </section>
+            <section>
+                <ul class="js-list">
 
-        <div class="container__header">
-            <h3>Dodaj zadanie</h3>
+                </ul>
+            </section>
         </div>
-
-        <div class="container__form">
-            <form class="js-form">
-                <input class="js-newTask">
-                <button>Dodaj zadanie</button>
-            </form>
-        </div>
-
-    </div>
-
-    <div class="container">
-        <div class="container__header">
-            <h3>Lista zadań</h3>
-        </div>
-
-        <div class="container__list">
-            <ul class="js-list">
-
-            </ul>
-        </div>
-
-    </div>
-
+    </main>
 
 </body>
 

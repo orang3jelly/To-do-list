@@ -4,4 +4,11 @@ html {
 
 *,
 ::after, ::before {
-box-sizing: inherit;}
+box-sizing: inherit;
+}
+
+.body{
+    background-color: rgb(237, 237, 237);
+    max-width: 800px;
+    margin: 0 auto;
+}
